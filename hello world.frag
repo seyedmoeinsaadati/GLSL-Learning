@@ -6,8 +6,8 @@ precision highp float;
 
 uniform float u_time;
 
-void main() {
-	gl_FragColor = vec4(0.735, 1.000, 0.240, 1.00);
+void main(){
+	gl_FragColor=vec4(.735,1.,.240,1.);
 }
 
 // data types

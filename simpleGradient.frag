@@ -9,9 +9,11 @@ uniform float u_time;
 void main() {
     
     // linear
-    // gl_FragColor = vec4(gl_FragCoord.x / gl_FragCoord.y);
-    gl_FragColor = vec4(gl_FragCoord.x / u_resolution.x); // vertical
-    gl_FragColor = vec4(gl_FragCoord.y / u_resolution.y); // horisontal
+    float t = gl_FragCoord.x / u_resolution.x;
+    // t = gl_FragCoord.x / gl_FragCoord.y;
+    // t = smoothstep(0.0, 1.0, t); //vertical smoothstep
+    // t = t * t * (3.0 - 2.0 * t);
+    gl_FragColor = vec4(t);
     
     // circle
     // vec2 centerPoint = vec2(0.5);
@@ -24,5 +26,4 @@ void main() {
     // vec2 centerPoint = u_mouse.xy / u_resolution.xy;
     // vec2 coord = gl_FragCoord.xy / u_resolution.xy;
     // gl_FragColor = vec4(1.0 - length(coord - centerPoint));
-    
 }

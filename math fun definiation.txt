@@ -1,0 +1,3 @@
+// linear interpolation (a, b, t)
+// a + t * (b - a);
+

@@ -10,7 +10,7 @@ bool InCircle(vec2 pos, float radius);
 
 void main() {
     vec2 st = gl_FragCoord.xy / u_resolution;
-    float radius = 10.0;
+    float radius = 50.0;
     bool mouseHoverOnSqure = (InCircle(u_mouse, radius)) ? true : false;
     if (InCircle(gl_FragCoord.xy, radius)&& mouseHoverOnSqure) {
         gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);

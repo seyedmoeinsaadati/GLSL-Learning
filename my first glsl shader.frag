@@ -14,6 +14,7 @@ void main() {
     if (IsInSqure(gl_FragCoord.xy, squareSize)&&mouseHoverOnSqure) {
         gl_FragColor = vec4(1);
     }else if (IsInSqure(gl_FragCoord.xy, squareSize)&& ! mouseHoverOnSqure) {
+        gl_
         gl_FragColor = vec4(u_mouse.x / u_resolution.x, 0.0, u_mouse.y / u_resolution.y, 1.0);
     }else {
         gl_FragColor = vec4(st.x, 0, st.y, 1);

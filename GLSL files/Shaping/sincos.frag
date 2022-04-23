@@ -6,6 +6,8 @@ uniform vec2 u_resolution;
 uniform vec2 u_mouse;
 uniform float u_time;
 
+#define PI 3.14159
+
 // Plot a line on Y using a value between 0.0-1.0
 float linearPlot(vec2 st) {    
     return smoothstep(0.02, 0.0, abs(st.y - st.x));
@@ -20,7 +22,8 @@ float powerPlot(vec2 st, float y) {
 void main() {
 	vec2 st = gl_FragCoord.xy/u_resolution;
 
-    float y1 = step(0.5, st.x);
+    // float y1 = .5+sin(u_time + st.x * PI) / 2.;
+    float y1 = fract((sin(u_time + st.x * PI) / 2.));
 
     vec3 color = vec3(y1);
 
